@@ -5,46 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小猫心 KITTENHEART</title>
     <link rel="stylesheet" href="main.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1 class="title">小猫心 KITTENHEART</h1>
+            <img src="image/logo.png" alt="小猫心 KITTENHEART" class="logo" style="height: 120px; margin-bottom: 20px;">
             <div class="social-icons">
-                <div class="social-icon soundcloud"></div>
-                <div class="social-icon spotify"></div>
-                <div class="social-icon tiktok"></div>
-                <div class="social-icon xiaohongshu"></div>
+                <div class="social-icon soundcloud"><i class="fa-brands fa-soundcloud"></i></div>
+                <div class="social-icon spotify"><i class="fa-brands fa-spotify"></i></div>
+                <div class="social-icon tiktok"><i class="fa-brands fa-tiktok"></i></div>
+                <div class="social-icon xiaohongshu"><img src="image\XiaohongshuLOGO.png"></div>
             </div>
             <nav>
-                <a href="#lyrics">Lyrics</a>
-                <a href="#digital-works" class="active">Digital Works</a>
-                <a href="#fashion">Fashion</a>
-                <a href="#physical-artworks">Physical Artworks</a>
-                <a href="#about">About me</a>
+                <a href="#lyrics" class="nav-link">Lyrics</a>
+                <a href="#digital-works" class="nav-link">Digital Works</a>
+                <a href="#fashion" class="nav-link">Fashion</a>
+                <a href="#physical-artworks" class="nav-link">Physical Artworks</a>
+                <a href="#about" class="nav-link">About me</a>
             </nav>
         </header>
-
-        <div class="gallery">
-            <div class="gallery-item"></div>
-            <div class="gallery-item large"></div>
-            <div class="gallery-item"></div>
-            <div class="gallery-item"></div>
-            <div class="gallery-item"></div>
-            <div class="gallery-item wide"></div>
+        <div id="content"></div>
+        <div id="translation-selector" style="display: none;">
+            <label for="translations">Select Translation:</label>
+            <select id="translations">
+                <option value="original">Original</option>
+                <option value="translation_en">English</option>
+                <option value="translation_fr">French</option>
+            </select>
         </div>
     </div>
-
-    <script>
-        // Navigation active state management
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-            });
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
