@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小猫心 KITTENHEART</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">小猫心 KITTENHEART</h1>
+            <div class="social-icons">
+                <div class="social-icon soundcloud"></div>
+                <div class="social-icon spotify"></div>
+                <div class="social-icon tiktok"></div>
+                <div class="social-icon xiaohongshu"></div>
+            </div>
+            <nav>
+                <a href="#lyrics">Lyrics</a>
+                <a href="#digital-works" class="active">Digital Works</a>
+                <a href="#fashion">Fashion</a>
+                <a href="#physical-artworks">Physical Artworks</a>
+                <a href="#about">About me</a>
+            </nav>
+        </header>
+
+        <div class="gallery">
+            <div class="gallery-item"></div>
+            <div class="gallery-item large"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item wide"></div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation active state management
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
