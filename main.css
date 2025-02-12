@@ -69,7 +69,11 @@ header {
 .social-icon.xiaohongshu img {
     width: 32px;
     height: 32px;
-    object-fit: cover;
+    /*object-fit: cover;*/
+}
+
+.social-icon.social-icon.xiaohongshu a {
+    text-align: center;
 }
 .social-icon.soundcloud { background-color: #FF3300; }
 .social-icon.spotify { background-color: #1DB954; }
