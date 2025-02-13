@@ -7,6 +7,11 @@
     font-family: Arial, sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Base Layout
 ----------------------------------------*/
 body {
@@ -63,17 +68,17 @@ header {
 .social-icon.xiaohongshu {
     background-color: #FE2C55;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px;
 }
 
 .social-icon.xiaohongshu img {
     width: 32px;
     height: 32px;
-    /*object-fit: cover;*/
-}
-
-.social-icon.social-icon.xiaohongshu a {
-    text-align: center;
+    object-fit: cover;
+    display:block
 }
 .social-icon.soundcloud { background-color: #FF3300; }
 .social-icon.spotify { background-color: #1DB954; }
@@ -123,7 +128,7 @@ nav a:hover {
 .song-section h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 32px;
+    font-size: 28px;
     color: #333;
 }
 
@@ -152,7 +157,7 @@ nav a:hover {
 .lyrics pre {
     white-space: pre-wrap;
     word-wrap: break-word;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 1.5;
     color: #333;
 }
@@ -298,100 +303,3 @@ nav a:hover {
     pointer-events: none;
 }
 
-/* ...existing code... */
-
-/* Responsive Design
-----------------------------------------*/
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .song-section {
-        margin-bottom: 40px;
-        padding: 15px;
-    }
-
-    .song-section h2 {
-        font-size: 24px;
-    }
-
-    .social-icons {
-        gap: 15px;
-    }
-
-    .social-icon {
-        width: 35px;
-        height: 35px;
-        font-size: 18px;
-    }
-
-    .language-selector {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .lang-btn {
-        padding: 0.4rem 0.8rem;
-        font-size: 14px;
-    }
-
-    .translation-content pre {
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-    .lyrics-page {
-        padding: 10px;
-    }
-
-    .show-lyrics-btn {
-        padding: 0.8rem;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-
-    .logo {
-        height: 80px;
-        margin-bottom: 15px;
-    }
-
-    .social-icons {
-        gap: 10px;
-    }
-
-    .social-icon {
-        width: 30px;
-        height: 30px;
-        font-size: 16px;
-    }
-
-    .song-section h2 {
-        font-size: 20px;
-    }
-
-    .lang-btn {
-        padding: 0.3rem 0.6rem;
-        font-size: 12px;
-    }
-
-    .translation-content pre {
-        font-size: 12px;
-        line-height: 1.3;
-    }
-}
